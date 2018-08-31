@@ -1,0 +1,107 @@
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #dcdcdc;
+}
+
+.table__headers-container {
+  display: flex;
+  width: 100%;
+}
+
+.table__headers {
+  display: flex;
+  width: 50%;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.table__headers--left {
+  border-right: 1px solid #dcdcdc;
+}
+
+.table__header {
+  width: 25%;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.table--left {
+  text-align: left;
+}
+
+.table--right {
+  text-align: right;
+}
+
+.table__part {
+  width: 50%;
+}
+
+.table__asks {
+  border-right: 1px solid #dcdcdc;
+}
+
+.table__bids {
+  width: 50%;
+}
+
+.table__rows-container {
+  display: flex;
+  width: 100%;
+  overflow-y: hidden;
+
+  &:hover {
+    overflow-y: overlay;
+  }
+}
+
+@-moz-document url-prefix() {
+  .table__rows-container:hover {
+    overflow-y: auto;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .table__rows-container:hover {
+    overflow-y: scroll;
+  }
+}
+
+@supports (-ms-accelerator:true) {
+  .table__rows-container:hover {
+    overflow-y: scroll;
+  }
+}
+
+.table__rows {
+  width: 50%;
+}
+
+.table__rows--bids .table__row {
+  border-left: 1px solid #dcdcdc;
+}
+
+.table__row {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &:hover {
+    background-color: #ecf1f4;
+  }
+
+  &:hover .table__values {
+    color: #000000;
+  }
+}
+
+.table__values {
+  width: 25%;
+  color: #747577;
+}
+
+
